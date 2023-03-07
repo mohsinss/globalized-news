@@ -47,10 +47,11 @@ st.header("Positive News")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("Often professionals would like to improve their emails, but don't have the skills to do so. \n\n This tool \
-                will help you improve your email skills by converting your emails into a more professional format. This tool \
+    st.markdown("often we receive news that are negative and depressing. \n\n This tool \
+                 will help reword the content to make it more optimistic and positive. \
+                 This tool \
                 is powered by [LangChain](https://langchain.com/) and [OpenAI](https://openai.com) and made by \
-                [@GregKamradt](https://twitter.com/GregKamradt). \n\n View Source Code on [Github](https://github.com/gkamradt/globalize-text-streamlit/blob/main/main.py)")
+                [@Mohsinbazea](https://twitter.com/MohsinBazea). \n\n ")
 
 with col2:
     st.image(image='TweetScreenshot.png', width=500, caption='https://twitter.com/DannyRichman/status/1598254671591723008')
