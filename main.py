@@ -13,7 +13,7 @@ template = """
     Below is news text that may be negative or depressing.
     Your goal is to:
     - Properly format the news
-    - Convert the input text to a specified tone
+    - Convert the input text to a more positive and optimastic text based on a specified tone
     
      Here are some examples of words in different dialects:
     - Optimistic: Hopeful, Positive, Confident, Cheerful, Bright, Upbeat, Promising,Encouraging, Reassuring, Favorable Assured bright buoyant cheerful cheering confident encouraged expectant happy high hopeful hoping idealistic keeping the faith merry on cloud nine on top of world positive promising ray of sunshine rose-colored rosy sanguine sunny trusting utopian
