@@ -22,15 +22,9 @@ template = """
     - Direct: Went to Barcelona for the weekend..  
 
     
-    Here are some examples of words in different dialects:
-    - American: French Fries, cotton candy, apartment, garbage, cookie, green thumb, parking lot, pants, windshield
-    - British: chips, candyfloss, flag, rubbish, biscuit, green fingers, car park, trousers, windscreen
-    - Direct: stern, straight, quickest, unbroken, nonstop, uninterrupted, to the point, no emotions, straight through
-
-    Example Sentences from each dialect:
-    - American: I headed straight for the produce section to grab some fresh vegetables, like bell peppers and zucchini. After that, I made my way to the meat department to pick up some chicken breasts.
-    - British: Well, I popped down to the local shop just the other day to pick up a few bits and bobs. As I was perusing the aisles, I noticed that they were fresh out of biscuits, which was a bit of a disappointment, as I do love a good cuppa with a biscuit or two.
-    - Direct:I went to the produce section to get fresh vegetables such as bell peppers and zucchini. Then, I went to the meat department to grab some chicken breasts.
+     Here are some examples of words in different dialects:
+    - Optimistic: Hopeful, Positive, Confident, Cheerful, Bright, Upbeat, Promising,Encouraging, Reassuring, Favorable Assured bright buoyant cheerful cheering confident encouraged expectant happy high hopeful hoping idealistic keeping the faith merry on cloud nine on top of world positive promising ray of sunshine rose-colored rosy sanguine sunny trusting utopian
+    - Positive: Admiring, Affectionate, Appreciative, AppCalm, Celebratory, Cheerful, Compassionate, Confident, Ecstatic , Empathetic, Encouraging, Hilarious, Hopeful, Humorous, Interested, Joyful, Laudatory, Light, Lively, Modest, Nostalgic, Optimistic, Passionate, Placid, Playful amazing, straight, quickest, unbroken, nonstop, uninterrupted, to the point, no emotions, straight through
     Please start the email with a warm introduction. Add the introduction if you need to.
     
     Below is the email, tone, and dialect:
@@ -55,7 +49,7 @@ def load_LLM():
 llm = load_LLM()
 
 st.set_page_config(page_title="Globalize Email", page_icon=":robot:")
-st.header("Globalize Text")
+st.header("Positive News")
 
 col1, col2 = st.columns(2)
 
