@@ -12,31 +12,24 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 template = """
     Below is an email that may be poorly worded.
     Your goal is to:
-    - Properly format the email
+    - Properly format the news text
     - Convert the input text to a specified tone
-    - Convert the input text to a specified dialect
-
-    Here are some examples different Tones:
-    - Formal: We went to Barcelona for the weekend. We have a lot of things to tell you.
-    - Informal: Went to Barcelona for the weekend. Lots to tell you.  
-    - Direct: Went to Barcelona for the weekend..  
-
     
      Here are some examples of words in different dialects:
     - Optimistic: Hopeful, Positive, Confident, Cheerful, Bright, Upbeat, Promising,Encouraging, Reassuring, Favorable Assured bright buoyant cheerful cheering confident encouraged expectant happy high hopeful hoping idealistic keeping the faith merry on cloud nine on top of world positive promising ray of sunshine rose-colored rosy sanguine sunny trusting utopian
     - Positive: Admiring, Affectionate, Appreciative, AppCalm, Celebratory, Cheerful, Compassionate, Confident, Ecstatic , Empathetic, Encouraging, Hilarious, Hopeful, Humorous, Interested, Joyful, Laudatory, Light, Lively, Modest, Nostalgic, Optimistic, Passionate, Placid, Playful amazing, straight, quickest, unbroken, nonstop, uninterrupted, to the point, no emotions, straight through
-    Please start the email with a warm introduction. Add the introduction if you need to.
+    Please start the news with a warm introduction. Add the introduction if you need to.
     
-    Below is the email, tone, and dialect:
+    Below is the text, tone, and dialect:
     TONE: {tone}
     DIALECT: {dialect}
-    EMAIL: {email}
+    Text: {text}
     
     YOUR {dialect} RESPONSE:
 """
 
 prompt = PromptTemplate(
-    input_variables=["tone", "dialect", "email"],
+    input_variables=["tone", "dialect", "text"],
     template=template,
 )
 
@@ -48,43 +41,43 @@ def load_LLM():
 
 llm = load_LLM()
 
-st.set_page_config(page_title="Globalize Email", page_icon=":robot:")
+st.set_page_config(page_title="Positive News", page_icon=":robot:")
 st.header("Positive News")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("Often professionals would like to improve their emails, but don't have the skills to do so. \n\n This tool \
-                will help you improve your email skills by converting your emails into a more professional format. This tool \
+    st.markdown("Often we receive news that feeds depressing and sad insights to our life. \n\n This tool \
+                 will convert news into a more optimistic and positive content. \n\n This tool \
                 is powered by [LangChain](https://langchain.com/) and [OpenAI](https://openai.com) and made by \
-                [@GregKamradt](https://twitter.com/GregKamradt). \n\n View Source Code on [Github](https://github.com/gkamradt/globalize-text-streamlit/blob/main/main.py)")
+                [@mohsinbazea](https://twitter.com/MohsinBazea). ")
 
 with col2:
     st.image(image='TweetScreenshot.png', width=500, caption='https://twitter.com/DannyRichman/status/1598254671591723008')
 
-st.markdown("## Enter Your Email To Convert")
+st.markdown("## Enter News To Convert")
 
 
 
 col1, col2 = st.columns(2)
 with col1:
     option_tone = st.selectbox(
-        'Which tone would you like your email to have?',
-        ('Formal', 'Informal', 'Direct'))
+        'Which tone would you like the news to have?',
+        ('Positive','Optimistic'))
     
-with col2:
-    option_dialect = st.selectbox(
-        'Which English Dialect would you like?',
-        ('American', 'British', 'Direct'))
+# with col2:
+#     option_dialect = st.selectbox(
+#         'Which English Dialect would you like?',
+#         ('American', 'British', 'Direct'))
 
 def get_text():
-    input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="Your Email...", key="email_input")
+    input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="News text...", key="email_input")
     return input_text
 
 email_input = get_text()
 
 if len(email_input.split(" ")) > 700:
-    st.write("Please enter a shorter email. The maximum length is 700 words.")
+    st.write("Please enter a shorter text. The maximum length is 700 words.")
     st.stop()
 
 def update_text_with_example():
