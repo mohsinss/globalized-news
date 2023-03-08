@@ -82,7 +82,7 @@ if len(email_input.split(" ")) > 700:
 
 def update_text_with_example():
     print ("in updated")
-    st.session_state.email_input = "Sally I am starts work at yours monday from dave"
+    st.session_state.email_input = "there is a strong argument for artificial intelligence negatively impacting unemployment rates within retail industry in numerous ways. For instance, self-service checkouts are extremely popular in stores, particularly supermarkets, so there is less of a requirement for cashiers. Also, AI can sort out the troublesome task of arranging a good online shopping experience for a businesses customers with product tagging, similar product recommendations etc. Beforehand, you would’ve found employees manually assigning product attributes but now there are image recognition models which have been trained to do all of that super efficiently."
 
 st.button("*See An Example*", type='secondary', help="Click to see an example of the News you will be converting.", on_click=update_text_with_example)
 
