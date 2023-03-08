@@ -68,7 +68,7 @@ with col1:
 with col2:
     option_dialect = st.selectbox(
         'Which English Dialect would you like?',
-        ('American', 'British', 'Direct'))
+        ('American', 'British', 'Texan'))
 
 def get_text():
     input_text = st.text_area(label="News Input", label_visibility='collapsed', placeholder="Your News...", key="email_input")
