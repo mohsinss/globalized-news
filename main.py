@@ -18,6 +18,11 @@ template = """
      Here are some examples of words in different dialects:
     - Optimistic: Hopeful, Positive, Confident, Cheerful, Bright, Upbeat, Promising,Encouraging, Reassuring, Favorable Assured bright buoyant cheerful cheering confident encouraged expectant happy high hopeful hoping idealistic keeping the faith merry on cloud nine on top of world positive promising ray of sunshine rose-colored rosy sanguine sunny trusting utopian
     - Positive: Admiring, Affectionate, Appreciative, AppCalm, Celebratory, Cheerful, Compassionate, Confident, Ecstatic , Empathetic, Encouraging, Hilarious, Hopeful, Humorous, Interested, Joyful, Laudatory, Light, Lively, Modest, Nostalgic, Optimistic, Passionate, Placid, Playful amazing, straight, quickest, unbroken, nonstop, uninterrupted, to the point, no emotions, straight through
+    Here are some examples of words in different dialects:
+    - American: French Fries, cotton candy, apartment, garbage, cookie, green thumb, parking lot, pants, windshield
+    - British: chips, candyfloss, flag, rubbish, biscuit, green fingers, car park, trousers, windscreen
+    - Texan: Yee-haw!, ah'ite,bald, Big'o, Caw, Fixin', Gimme, Gonna, In'thang, Jeetjet, Kicker, Libel'ta
+
     Please start the news with a warm introduction. Add the introduction if you need to.
     
     Below is the news text, tone, and dialect:
